@@ -119,7 +119,7 @@ class CustomDataController extends Controller
         if ( !empty($data) ) {
             // Save to ClientOrder
             $ClientOrderID = DB::table('ClientOrder')->insertGetId([
-                'UserID'    => $request->session()->get('clientID'),
+                'ClientID'  => $request->session()->get('clientID'),
                 'OrderDate' => date('Y-m-d'),
                 'OrderTime' => date('H:i:s'),
                 'IP'        => $request->ip()
@@ -152,6 +152,8 @@ class CustomDataController extends Controller
                 ]);
             }
         }
+
+        $request->session()->forget('cart');
 
         return true;
     }

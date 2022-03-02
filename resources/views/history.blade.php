@@ -26,12 +26,12 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="relative flex items-top justify-center bg-gray-100 sm:items-center py-4 sm:pt-0">
             {{-- @if (Route::has('login')) --}}
                 <div class="fixed top-0 right-0 px-6 py-4">
                     {{-- @auth --}}
-                    <a href="{{ url('/') }}" class="btn btn-link text-sm text-gray-700 dark:text-gray-500 underline" style="color: whitesmoke">Back</a>
-                    <a href="{{ route('logout.custom') }}" class="btn btn-link text-sm text-gray-700 dark:text-gray-500 underline" style="color: whitesmoke">Logout</a>
+                    <a href="{{ url('/') }}" class="btn btn-link text-sm text-gray-700 underline" style="color: whitesmoke">Back</a>
+                    <a href="{{ route('logout.custom') }}" class="btn btn-link text-sm text-gray-700 underline" style="color: whitesmoke">Logout</a>
                     {{-- @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
                     @endauth --}}
@@ -39,7 +39,7 @@
             {{-- @endif --}}
         </div>
 
-        <div class="bg-gray-100 dark:bg-gray-900 sm:items-center py-4" style="padding-left: 4%; padding-right: 4%;">
+        <div class="bg-gray-100 sm:items-center py-4" style="padding-left: 4%; padding-right: 4%;">
             @if ( !empty( $orderHistory ) )
                 <h3 style="color: white">Order History</h3>
                 <table class="table table-bordered border-primary">
